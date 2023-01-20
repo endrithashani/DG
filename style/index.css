@@ -607,6 +607,14 @@ input{
     .benifitet h1{
         font-size:32px;
     }
+    .effect{
+        width: 60px;
+        height: 60px;
+    }
+    .effect img{
+        width: 30px;
+        height: 30px;
+    }
     input{
         width: 340px;
     }
@@ -617,4 +625,5 @@ input{
     .upper-text h3{
         margin-left: 10px;
     }
+    
 }
