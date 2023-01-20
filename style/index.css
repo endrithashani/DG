@@ -595,5 +595,26 @@ input{
     input{
         width: 340px;
     }
+}
 
+@media only screen and (max-width: 460px){
+    .services-title h1{
+        font-size:32px;
+    }
+    .main-text h1 {
+        font-size:32px;
+    }
+    .benifitet h1{
+        font-size:32px;
+    }
+    input{
+        width: 340px;
+    }
+    #subs{
+        margin-left: 10px;
+        width:57%;
+    }
+    .upper-text h3{
+        margin-left: 10px;
+    }
 }
