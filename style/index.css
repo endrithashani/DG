@@ -555,7 +555,7 @@ input{
 footer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     background-color: #222429;
 }
@@ -563,11 +563,25 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    background-color: #36456a;
+    cursor: pointer;
 }
-
+.footer-circle img{
+    width: 30px;
+    height: 30px;
+}
+.last-icons{
+    display: flex;
+}
+footer p{
+    margin-top: 55px;
+    color:#9ca7af;
+    margin-bottom: 55px;
+}
 @media only screen and (max-width: 980px){
     .header{
         padding-top: 5px;
@@ -657,6 +671,9 @@ footer{
     .upper-text h3{
         font-size: 22px;
         margin-left: 15px;
+    }
+    footer{
+        flex-direction: column;
     }
 }
 @media only screen and (max-width: 550px){
