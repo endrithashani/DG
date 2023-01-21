@@ -11,6 +11,65 @@ html{
 body{
     background-color:#FFFFFF;
 }
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.65s, visibility 0.65s;
+}
+  
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #3F00FF;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+  
+@keyframes loading {
+  from {
+      transform: rotate(0turn);
+  }
+    to {
+      transform: rotate(1turn);
+    }
+}
+#progress {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+}
+  
 .header{
     position: sticky;
     top: 0;
@@ -460,7 +519,7 @@ input{
     background-size: cover;
 }
 .upper-pic{
-    position: absolute;
+    position: relative;
     width:100%;
     height: 280px;
     opacity: 0.7;
@@ -491,6 +550,22 @@ input{
 }
 #subcribe:hover{
     box-shadow: inset 170px 0 0 0 #3F00FF;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #222429;
+}
+.footer-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 980px){
@@ -560,6 +635,8 @@ input{
     }
     .main-img img{
         width:90%;
+        margin-left: 5%;
+        margin-bottom: 20px;
     }
     .smaller-containers{
         flex-direction: column;
@@ -571,7 +648,7 @@ input{
         margin-bottom: 35px;
     }
     #subs{
-        margin-left: 15px;
+        margin-left: 10px;
         width:60%;
     }
     #subcribe{
